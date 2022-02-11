@@ -11407,3 +11407,18 @@ span {
   font-weight: 700;
   transition: .3s ease-in-out !important;
 }
+
+.iframe-container {
+  position:relative;
+  width: 100%;
+  padding-bottom: 50%;
+  height: 0;
+}
+
+.iframe-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+}
