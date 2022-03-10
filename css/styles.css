@@ -11613,8 +11613,12 @@ body {
    color: rgb(255, 255, 255) !important; 
 }
 
+.red-color {
+  color: var(--bs-red);
+  font-weight: bold;
+}
 .tick-flip {
-   font-family: !important; 
+   font-family:!important; 
 }
 
 .tick-flip-panel-text-wrapper {
@@ -11628,3 +11632,4 @@ body {
 .tick-flip {
    border-radius:0.12em !important; 
 }
+
