@@ -44,6 +44,9 @@
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/87475928" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
+
+    <link rel="stylesheet" href="css/flip.min.css" />
+
     <!-- /Yandex.Metrika counter -->
 </head>
 
@@ -69,7 +72,16 @@
             <div class="col-6"> -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
                 <div class="">
+
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                        <!-- <li class="nav-item">
+                            <p class="lead mb-0"><a href="tel:+7 708 425-25-52">+7 708 425-25-52</a></p>
+                            <p class="lead mb-0"><a href="tel:+7 717 225-25-52">+7 717 225-25-52</a></p>
+                        </li>
+ -->
+
+
                         <li class="nav-item active">
                             <a class="nav-link" href="#advantages">Преимущества</a>
                         </li>
@@ -87,6 +99,8 @@
                                 <i class="bi-person-fill"></i>
                             </a>
                         </li>
+
+
                     </ul>
                 </div>
             </div>
@@ -100,16 +114,54 @@
     <header class="masthead">
         <div class="container position-relative">
             <div class="row justify-content-center">
-                <div class="col-xl-6">
+                <div class="col-xl-9">
                     <div class="text-center text-white">
-                        <h1 class="mb-5">Соберите свою финансовую отчетность за считанные минуты!</h1>
-                        <div class="col-auto">
-                            <a href="#main-info" class="btn btn-primary btn-lg" id="submitButton" type="submit">Узнать
-                                больше</a>
+                        <h3 class="mb-5">
+
+                            До внедрения модуля «Расчет КПН и заполнение формы Декларации 100.00» осталось совсем
+                            немного.
+
+                            Успейте зарегистрироваться по стоимости Тарифа «ПРЕМИУМ»
+
+                            При регистрации по тарифу «ПРЕМИУМ» сейчас, Вы будете подключены к тарифу «ПРЕМИУМ +»
+                            автоматически.
+
+
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tick" data-did-init="handleTickInit">
+                        <div data-repeat="true" data-layout="horizontal center fit"
+                            data-transform="preset(d, h, m, s) -> delay">
+                            <div class="tick-group">
+                                <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                                    <span data-view="flip"></span>
+                                </div>
+                                <span data-key="label" data-view="text" class="tick-label"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <br>
+            <br>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-xl-9">
+                    <div class="text-center text-white">
+                        <div class="col-auto">
+                            <a href="#tariffs" class="btn btn-primary btn-lg" id="submitButton" type="submit">Посмотреть тарифы</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </header>
     <!-- Icons Grid-->
@@ -343,42 +395,98 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <br>
-                    <br>
-                    <h3 class="text-center"> Тарифы </h3>
-                    <br>
-                    <br>
-                    <p class="lead text-center">А тарифов нет .Оплатите годовой доступ 18 000 тенге и получайте выгоды
-                        от экономии
-                        времени и обучения</p>
-                </div>
-                <div class="col-lg-4 text-center rounded">
-                    <!-- <h4 class="my-4">PREMIUM</h4> -->
-                    <p class="font-weight-bold"></p>
-                    <ul class="list-unstyled">
-                    </ul>
-                    <!-- <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-green">Get Free</a> -->
-                </div>
 
-                <div class="col-lg-4 text-center py-4 mt-5 rounded" id="price-table__premium">
-                    <h4 class="my-4">Премиум</h4>
-                    <p class="font-weight-bold"> <span class="display-2 font-weight-bold">18000 тг</span> / г.</p>
-                    <ul class="list-unstyled">
-                        <li>Стоимость не корректируется в зависимости от вида компании, специфики ее деятельности,
-                            оборотов и особенностей учета.</li>
-                        <li>Не требует от пользователей глубоких знаний и навыков составления финансовой отчетности.
-                            Достаточно знать свой план счетов, правильно вести учет и ориентироваться в своих данных.
-                        </li>
-                        <!-- <li>25 team Members</li>
-                        <li>Limited Support</li> -->
-                    </ul>
-                    <a href="https://www.my.fsg.com.kz/registration"
-                        class="btn my-4 font-weight-bold btn-info">Купить</a>
+                    <h3 class="text-center mt-5"> Тарифы </h3>
+                    <div class="snip1214 mt-5">
+                        <div class="plan">
+                            <h3 class="plan-title">
+                                Демо
+                            </h3>
+                            <div class="plan-cost"><span class="plan-price">Бесплатно</span></div>
+                            <ul class="plan-features">
+                                <li><i class="ion-checkmark"> </i>Выгрузка данных из 1С</li>
+                                <li><i class="ion-checkmark"> </i>Доступ к шаблонам</li>
+                                <li><i class="ion-checkmark"> </i>Доступ к раскрытиям</li>
+                                <li><i class="ion-checkmark"> </i>Расчет коэффициентов</li>
+                                <li><i class="ion-checkmark"> </i></li>
+                                <li><i class="ion-checkmark"> </i></li>
+                                <li><i class="ion-checkmark"> </i></li>
+                            </ul>
+                            <div class="plan-select"><a href="https://www.my.fsg.com.kz/registration">Выбрать</a></div>
+                        </div>
+
+                        <div class="plan">
+                            <h3 class="plan-title">
+                                Премиум
+                            </h3>
+                            <div class="plan-cost"><span class="plan-price">18000 тг</span><span
+                                    class="plan-type">&nbsp;/
+                                    год</span></div>
+                            <ul class="plan-features">
+                                <li><i class="ion-checkmark"> </i><strong>Отчеты в формате Word</strong></li>
+                                <li><i class="ion-checkmark"> </i>Выгрузка данных из 1С</li>
+                                <li><i class="ion-checkmark"> </i>Доступ к шаблонам</li>
+                                <li><i class="ion-checkmark"> </i>Доступ к раскрытиям</li>
+                                <li><i class="ion-checkmark"> </i>Расчет коэффициентов</li>
+                                <li><i class="ion-checkmark"> </i></li>
+                                <li><i class="ion-checkmark"> </i></li>
+                            </ul>
+                            <div class="plan-select"><a href="https://www.my.fsg.com.kz/registration">Выбрать</a></div>
+                        </div>
+
+                        <div class="plan disabled">
+                            <h3 class="plan-title">
+                                Премиум +
+                            </h3>
+                            <div class="plan-cost"><span class="plan-price">54 000 тг</span><span
+                                    class="plan-type">&nbsp;/
+                                    год</span></div>
+                            <ul class="plan-features">
+
+                                <li><i class="ion-checkmark"> </i><strong>Расчет КПН в формате Декларации
+                                        100.00</strong></li>
+                                <li><i class="ion-checkmark"> </i>Отчеты в формате Word</li>
+                                <li><i class="ion-checkmark"> </i>Выгрузка данных из 1С</li>
+                                <li><i class="ion-checkmark"> </i>Доступ к шаблонам</li>
+                                <li><i class="ion-checkmark"> </i>Доступ к раскрытиям</li>
+                                <li><i class="ion-checkmark"> </i>Расчет коэффициентов</li>
+                                <li><i class="ion-checkmark"> </i></li>
+                            </ul>
+                            <div class="plan-select"><a href="https://www.my.fsg.com.kz/registration">В разработке</a>
+                            </div>
+                        </div>
+
+                        <div class="plan disabled">
+                            <h3 class="plan-title">
+                                Максимум
+                            </h3>
+                            <div class="plan-cost"><span class="plan-price">90 000 тг</span><span
+                                    class="plan-type">&nbsp;/
+                                    год</span></div>
+                            <ul class="plan-features">
+
+                                <li><i class="ion-checkmark"> </i><strong>Консолидация</strong></li>
+
+                                <li><i class="ion-checkmark"> </i>Расчет КПН в формате Декларации 100.00</li>
+                                <li><i class="ion-checkmark"> </i>Отчеты в формате Word</li>
+                                <li><i class="ion-checkmark"> </i>Выгрузка данных из 1С</li>
+                                <li><i class="ion-checkmark"> </i>Доступ к шаблонам</li>
+                                <li><i class="ion-checkmark"> </i>Доступ к раскрытиям</li>
+                                <li><i class="ion-checkmark"> </i>Расчет коэффициентов</li>
+                            </ul>
+                            <div class="plan-select"><a href="https://www.my.fsg.com.kz/registration" disabled>В
+                                    разработке</a></div>
+                        </div>
+                    </div>
+
                 </div>
-                <br>
-                <br>
-
-
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                    <br>
+                    <br>
+                </div>
             </div>
         </div>
     </section>
@@ -428,11 +536,29 @@
             <div class="row g-0">
                 <div class="col-lg-6 order-lg-2 text-white showcase-img"
                     style="background-image: url('assets/img/bg-showcase-1.webp')"></div>
+
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                     <h2>Остались вопросы? Звоните!</h2>
                     <p class="lead mb-0"><a href="tel:+7 708 425-25-52">+7 708 425-25-52</a></p>
                     <p class="lead mb-0"><a href="tel:+7 717 225-25-52">+7 717 225-25-52</a></p>
+
+                    <br>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/"><i class="bi-youtube fs-3"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/financial_statement_generator/"><i
+                                    class="bi-instagram fs-3"></i></a>
+                        </li>
+                    </ul>
+
                 </div>
+
+                <!-- <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                </div> -->
+
+
             </div>
         </div>
     </section>
@@ -442,30 +568,68 @@
     <footer class="footer bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                <div class="col-lg-4 h-100 text-center text-lg-start my-auto">
                     <p class="text-muted small mb-4 mb-lg-0">&copy; https://www.fsg.com.kz 2021.</p>
                 </div>
-                <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+
+                <div class="col-lg-4 h-100 text-center text-lg-start my-auto">
+                </div>
+
+                <div class="col-lg-4 h-100 text-center text-lg-end my-auto">
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item me-4">
                             <a href="offer.html">Оферта</a>
                         </li>
+
                         <!-- <li class="list-inline-item me-4">
                             <a href="#!">Политика конфиденциальности</a>
-                        </li> -->
-                        <!--  
-                        <li class="list-inline-item">
-                            <a href="#!"><i class="bi-instagram fs-3"></i></a>
-                        </li>
-                        -->
-                        <!-- <li class="list-inline-item">
-                            <a href="https://www.youtube.com/"><i class="bi-youtube fs-3"></i></a>
                         </li> -->
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        function handleTickInit(tick) {
+            // var nextYear = (new Date()).getFullYear() + 1;
+
+            // Tick.count.down('10-00-00').onupdate = function (value) {
+            //     tick.value = value;
+            // };
+
+            var locale = {
+                YEAR_PLURAL: 'Jaren',
+                YEAR_SINGULAR: 'Jaar',
+                MONTH_PLURAL: 'Месяцев',
+                MONTH_SINGULAR: 'Месяц',
+                WEEK_PLURAL: 'недель',
+                WEEK_SINGULAR: 'неделя',
+                DAY_PLURAL: 'Дней',
+                DAY_SINGULAR: 'День',
+                HOUR_PLURAL: 'Часов',
+                HOUR_SINGULAR: 'Час',
+                MINUTE_PLURAL: 'Минут',
+                MINUTE_SINGULAR: 'Минута',
+                SECOND_PLURAL: 'Секунд',
+                SECOND_SINGULAR: 'Секунда',
+                MILLISECOND_PLURAL: 'Milliseconden',
+                MILLISECOND_SINGULAR: 'Milliseconde'
+            };
+
+            for (var key in locale) {
+                if (!locale.hasOwnProperty(key)) { continue; }
+                tick.setConstant(key, locale[key]);
+            }
+            var counter = Tick.count.down('2022-03-20T00:00:00+01:00');
+
+            counter.onupdate = function (value) {
+                tick.value = value;
+            };
+        }
+    </script>
+
+    <script src="js/flip.min.js"></script>
 </body>
 
 </html>
