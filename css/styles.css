@@ -11636,3 +11636,14 @@ body {
 .red-text {
   color: #bb2d3b;
 }
+
+.huge-text {
+  font-size: 23px;
+}
+
+.huge-text a {
+  color: white;
+}
+.pd  {
+  padding: 10px
+}
