@@ -11292,7 +11292,7 @@ header.masthead {
   background-color: #343a40;
   background: url("../assets/img/bg-masthead.webp") no-repeat center center;
   background-size: cover;
-  padding-top: 8rem;
+  padding-top: 2rem;
   padding-bottom: 8rem;
 }
 header.masthead:before {
@@ -11310,7 +11310,7 @@ header.masthead h1, header.masthead .h1 {
 }
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 12rem;
+    padding-top: 4rem;
     padding-bottom: 12rem;
   }
   header.masthead h1, header.masthead .h1 {
@@ -11633,3 +11633,6 @@ body {
    border-radius:0.12em !important; 
 }
 
+.red-text {
+  color: #bb2d3b;
+}
