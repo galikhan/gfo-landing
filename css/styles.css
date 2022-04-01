@@ -11637,12 +11637,13 @@ body {
   color: #bb2d3b;
 }
 
-.huge-text {
+.attention-text {
   font-size: 23px;
 }
 
 .huge-text a {
   color: white;
+  font-size: 23px;
 }
 .pd  {
   padding: 10px
