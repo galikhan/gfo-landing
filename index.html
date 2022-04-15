@@ -22,10 +22,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -186,21 +183,23 @@
         <div class="container position-relative">
             <div class="row justify-content-center">
                 <div class="col-xl-11">
-                    <div class="bg-light red-text text-center attention-text">
-
-                        <p>РЕГИСТРАЦИЯ НА БЕСПЛАТНЫЙ ОНЛАЙН ВЕБИНАР </p>
-                        <p>«КАК СОСТАВИТЬ ФИНАНСОВУЮ И НАЛОГОВУЮ ОТЧЕТНОСТЬ ЗА 15 МИНУТ»</p>
-                        <p>ОТ МАХМУТОВОЙ САУЛЕ (АУДИТОР РК, АССА, CIPA) <a
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSfD2Wn-UVHMtfGOFkv5uspTiPuNvS7hmuLtVkNajv9g7wU7yg/viewform">ПО
-                                ССЫЛКЕ </a>.
-                        </p>
-
-                        <p>ДАТА СЛЕДУЮЩЕГО ВЕБИНАРА 8 АПРЕЛЯ 2022 ГОДА 11.00 (ПО АСТАНЕ)</p>
+                    <div class="text-center text-white">
+                        <h2 class="mt-2">ПОСЧИТАЕМ ВАШ КПН ЗА 10 МИНУТ !</h2>
+                        <p class="attention-text mb-0 mt-4">Запишитесь на индивидульную консультацию к аудитору.</p>
+                        <p class="attention-text mb-0">Мы поможем зарегистрироваться, выгрузить Ваши данные и убедиться
+                            в том, что посчитать и заполнить форму КПН с регистрами за 10 минут это РЕАЛЬНОСТЬ!</p>
                     </div>
                     <div class="text-center text-white mt-5">
-                        <h2 class="mt-5">Добро пожаловать на портал «Financial Statement Generator».</h2>
-                        <h2 class="mb-5">Всего за несколько минут мы обработаем и трансформируем данные Вашего учета и
-                            Вы получите </h2>
+                        <div class="col-auto mb-5">
+                            <a href="#request" class="btn btn-primary btn-lg" id="submitButton" type="submit">Подать
+                                заявку на консультацию</a>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-white mt-5">
+
+                        <p class="attention-text mb-5">Всего за несколько минут мы обработаем и трансформируем данные
+                            Вашего учета и Вы получите</p>
                     </div>
 
                     <div class="text-center mt-5 huge-text">
@@ -268,8 +267,7 @@
                     <div class="text-center text-white mt-5">
                         <div class="col-auto mb-5">
                             <h2 class="mb-5">Сохраните Ваше время на более важные вещи в жизни!</h2>
-                            <a href="#main-info" class="btn btn-primary btn-lg" id="submitButton" type="submit">Узнать
-                                больше</a>
+                            <!-- <a href="#main-info" class="btn btn-primary btn-lg" id="submitButton" type="submit">Узнать больше</a> -->
                         </div>
                     </div>
                 </div>
@@ -587,6 +585,19 @@
         </div>
     </section>
 
+    <!-- Call to Action-->
+    <section class="call-to-action text-white text-center" id="signup">
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <h2 class="mb-4">Регистрируйтесь прямо сейчас!</h2>
+                    <div class="col-auto">
+                        <a href="https://www.my.fsg.com.kz/registration" class="btn btn-primary">Зарегистрируйтесь</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
 
     <section class="showcase" id="tariffs">
         <div class="container">
@@ -679,43 +690,29 @@
     </section>
 
 
-    <!-- Call to Action-->
-    <section class="call-to-action text-white text-center" id="signup">
-        <div class="container position-relative">
-            <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <h2 class="mb-4">Регистрируйтесь прямо сейчас!</h2>
-                    <div class="col-auto">
-                        <a href="https://www.my.fsg.com.kz/registration" class="btn btn-primary">Зарегистрируйтесь</a>
-                        <!-- <div class="row">
-                            <div class="col">
-                                <input class="form-control form-control-lg" id="emailAddressBelow" type="email"
-                                    placeholder="Email Address" data-sb-validations="required,email" />
-                                <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:required">
-                                    Email Address is required.</div>
-                                <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:email">
-                                    Email Address Email is not valid.</div>
-                            </div>
-                            <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton"
-                                    type="submit">Submit</button></div>
-                        </div>
 
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                <p>To activate this form, sign up at</p>
-                                <a class="text-white"
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div> -->
-                        <!-- 
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div> -->
 
+    <section class="showcase features-icons bg-gray-600 text-center" id="request">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <h2>Оставить заявку</h2>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <div class="form">
+                        <form id="requestForm">
+                            <input type="text" placeholder="Имя" name="name" />
+                            <br>
+                            <input type="text" placeholder="Город" name="city" />
+                            <br>
+                            <input type="text" placeholder="Номер телефона" name="phone" />
+                            <br>
+                            <button class="btn btn-primary">Отправить</button>
+                        </form>
                     </div>
                 </div>
+                <div class="col-lg-4"></div>
             </div>
+        </div>
     </section>
 
     <section class="showcase" id="contacts">
@@ -779,6 +776,46 @@
     </footer>
 
     <script>
+
+
+        $("#requestForm").submit(function (event) {
+
+            // Stop form from submitting normally
+            event.preventDefault();
+
+            // Get some values from elements on the page:
+            var $form = $(this);
+            var name = $form.find("input[name='name']").val();
+            var city = $form.find("input[name='city']").val();
+            var phone = $form.find("input[name='phone']").val();
+
+            // Send the data using post
+//            var posting = $.post(url, { s: term });
+
+            // Put the results in a div
+            // posting.done(function (data) {
+            //     var content = $(data).find("#content");
+            //     $("#result").empty().append(content);
+            // });
+            var url = "https://www.my.fsg.com.kz/contact-form"
+            //var url = "http://localhost:9000/contact-form"
+            $.ajax({
+            url: url,
+            type: 'post',
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                $('#target').html(data.msg);
+                $form.find("input[name='name']").val('');
+                $form.find("input[name='city']").val('');
+                $form.find("input[name='phone']").val('');
+            },
+            data: JSON.stringify(
+                {name: name, city: city, phone: phone}
+            )
+        });
+        });
+
         function handleTickInit(tick) {
             // var nextYear = (new Date()).getFullYear() + 1;
 

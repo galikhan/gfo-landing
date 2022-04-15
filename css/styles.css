@@ -11640,7 +11640,7 @@ body {
 }
 
 .attention-text {
-  font-size: 23px;
+  font-size: 27px;
 }
 
 .huge-text a {
@@ -11653,4 +11653,14 @@ body {
 
 .margin-auto {
   margin:auto;
+}
+.form input {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.form button {
+  width: 40%;
+  margin-top: 20px;
 }
