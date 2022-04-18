@@ -17,12 +17,16 @@
         type="text/css" />
 
 
-    <link href="css/styles.css?v=1.1" rel="stylesheet" />
+    <link href="css/styles.css?v=1.2" rel="stylesheet" />
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/imask@6.4.2/dist/imask.js"></script>
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -110,75 +114,7 @@
         </div>
     </nav>
 
-    <!-- Masthead-->
-    <!--header class="masthead">
 
-        <div class="container position-relative">
-            <div class="row justify-content-center">
-                <div class="col-xl-10">
-                    <div class="text-center text-white">
-                        <h2 class="mb-5">
-                            До внедрения модуля <br>«Расчет КПН и заполнение формы Декларации 100.00» <br>осталось
-                        </h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="tick" data-did-init="handleTickInit">
-                        <div data-repeat="true" data-layout="horizontal center fit"
-                            data-transform="preset(d, h, m, s) -> delay">
-                            <div class="tick-group">
-                                <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
-                                    <span data-view="flip"></span>
-                                </div>
-                                <span data-key="label" data-view="text" class="tick-label"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center mt-5">
-                <div class="col-xl-10">
-                    <div class="text-center text-white">
-                        <h2 class="mb-5">
-                            Успейте зарегистрироваться по стоимости Тарифа «ПРЕМИУМ»
-                        </h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-xl-10">
-                    <div class="text-center text-white">
-                        <h2 class="mb-5">
-                            При регистрации по тарифу «ПРЕМИУМ» сейчас, Вы будете подключены к тарифу «ПРЕМИУМ +»
-                            автоматически.
-                        </h2>
-                    </div>
-                </div>
-            </div>
-
-
-            <br>
-            <br>
-            <br>
-            <div class="row justify-content-center">
-                <div class="col-xl-9">
-                    <div class="text-center text-white">
-                        <div class="col-auto">
-                            <a href="#tariffs" class="btn btn-primary btn-lg" id="submitButton" type="submit">Посмотреть
-                                тарифы</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </header-->
     <header class="masthead">
         <div class="container position-relative">
             <div class="row justify-content-center">
@@ -692,19 +628,21 @@
 
 
 
-    <section class="showcase features-icons bg-gray-600 text-center" id="request">
+    <section class="showcase text-center features-icons bg-gray-600" id="request">
         <div class="container-fluid p-0">
             <div class="row g-0">
                 <h2>Оставить заявку</h2>
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
+                    <div class="request-result"></div>
                     <div class="form">
                         <form id="requestForm">
-                            <input type="text" placeholder="Имя" name="name" />
+                            <input class="rounded" type="text" placeholder="Имя" name="name" max="200" />
                             <br>
-                            <input type="text" placeholder="Город" name="city" />
+                            <input class="rounded" type="text" placeholder="Город" name="city" max="200" />
                             <br>
-                            <input type="text" placeholder="Номер телефона" name="phone" />
+                            <input id="phone-input" class="rounded" type="text" placeholder="Номер телефона"
+                                name="phone" max="30" />
                             <br>
                             <button class="btn btn-primary">Отправить</button>
                         </form>
@@ -780,6 +718,15 @@
 
         $("#requestForm").submit(function (event) {
 
+            var successResult =
+                "<div class='alert alert-success'>"
+                + "<strong>Заявка отправлена</strong>"
+                + "</div>";
+            var dangerResult =
+                "<div class='alert alert-danger'>"
+                + "<strong>Заполните все поля</strong>"
+                + "</div>";
+
             // Stop form from submitting normally
             event.preventDefault();
 
@@ -789,72 +736,43 @@
             var city = $form.find("input[name='city']").val();
             var phone = $form.find("input[name='phone']").val();
 
-            // Send the data using post
-//            var posting = $.post(url, { s: term });
-
-            // Put the results in a div
-            // posting.done(function (data) {
-            //     var content = $(data).find("#content");
-            //     $("#result").empty().append(content);
-            // });
-            var url = "https://www.my.fsg.com.kz/contact-form"
-            //var url = "http://localhost:9000/contact-form"
-            $.ajax({
-            url: url,
-            type: 'post',
-            dataType: 'json',
-            contentType: 'application/json',
-            success: function (data) {
-                $('#target').html(data.msg);
-                $form.find("input[name='name']").val('');
-                $form.find("input[name='city']").val('');
-                $form.find("input[name='phone']").val('');
-            },
-            data: JSON.stringify(
-                {name: name, city: city, phone: phone}
-            )
-        });
-        });
-
-        function handleTickInit(tick) {
-            // var nextYear = (new Date()).getFullYear() + 1;
-
-            // Tick.count.down('10-00-00').onupdate = function (value) {
-            //     tick.value = value;
-            // };
-
-            var locale = {
-                YEAR_PLURAL: 'Jaren',
-                YEAR_SINGULAR: 'Jaar',
-                MONTH_PLURAL: 'Месяцев',
-                MONTH_SINGULAR: 'Месяц',
-                WEEK_PLURAL: 'недель',
-                WEEK_SINGULAR: 'неделя',
-                DAY_PLURAL: 'Дней',
-                DAY_SINGULAR: 'День',
-                HOUR_PLURAL: 'Часов',
-                HOUR_SINGULAR: 'Час',
-                MINUTE_PLURAL: 'Минут',
-                MINUTE_SINGULAR: 'Минута',
-                SECOND_PLURAL: 'Секунд',
-                SECOND_SINGULAR: 'Секунда',
-                MILLISECOND_PLURAL: 'Milliseconden',
-                MILLISECOND_SINGULAR: 'Milliseconde'
-            };
-
-            for (var key in locale) {
-                if (!locale.hasOwnProperty(key)) { continue; }
-                tick.setConstant(key, locale[key]);
+            if (name && city && phone) {
+                //procedd
+            } else {
+                $('.request-result').html(dangerResult);
+                return;
             }
-            var counter = Tick.count.down('2022-03-26T00:00:00+01:00');
 
-            counter.onupdate = function (value) {
-                tick.value = value;
-            };
-        }
+
+            var url = "https://www.my.fsg.com.kz/contact-form";
+
+            $.ajax({
+                url: url,
+                type: 'post',
+                dataType: 'json',
+                contentType: 'application/json',
+                xhrFields: { withCredentials: false },
+                success: function (data) {
+                    $('#target').html(data.msg);
+                    $form.find("input[name='name']").val('');
+                    $form.find("input[name='city']").val('');
+                    $form.find("input[name='phone']").val('');
+                    $('.request-result').html(successResult)
+                },
+                data: JSON.stringify(
+                    { name: name, city: city, phone: phone }
+                ),
+                crossDomain: true
+            });
+        });
+
+        var element = document.getElementById('phone-input');
+        var maskOptions = {
+            mask: '+{7}(000)000-00-00'
+        };
+        var mask = IMask(element, maskOptions);
+
     </script>
-
-    <script src="js/flip.min.js"></script>
 </body>
 
 </html>
