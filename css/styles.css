@@ -11664,3 +11664,6 @@ body {
   width: 40%;
   margin-top: 20px;
 }
+li a {
+  float:left;
+}
